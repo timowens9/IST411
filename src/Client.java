@@ -11,7 +11,7 @@ public class Client {
             Socket soc = new Socket("localhost", 1024);
             BufferedReader inputString = new BufferedReader(new InputStreamReader(System.in));
             System.out.println("Enter your Message");
-            String str = inputString.readLine();
+            String str = inputString.readLine().toUpperCase();
             PrintWriter output = new PrintWriter(soc.getOutputStream(),true);
             output.println(str);
 
