@@ -17,6 +17,10 @@ public class Server {
           String str = input.readLine();
           PrintWriter output = new PrintWriter(sock.getOutputStream(),true);
           output.println("The Server Reply: " + str);
+          input.close();
+          output.close();
+          ss.close();
+          sock.close();
       }
       catch (Exception e)
       {

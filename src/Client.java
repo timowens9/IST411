@@ -17,10 +17,14 @@ public class Client {
 
             BufferedReader in = new BufferedReader(new InputStreamReader(soc.getInputStream()));
             System.out.println(in.readLine());
+            inputString.close();
+            output.close();
+            soc.close();
         }
         catch (Exception e)
         {
             e.printStackTrace();
+            System.exit(1);
 
         }
 
